@@ -37,7 +37,8 @@ endif
 # Some Permissions
 PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
-    vendor/aosp/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+    vendor/aosp/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml \
+    vendor/aosp/prebuilt/common/etc/permissions/privapp-permissions-custom-system.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/etc/permissions/privapp-permissions-custom-system_ext.xml
 
 # Copy all custom init rc files
 $(foreach f,$(wildcard vendor/aosp/prebuilt/common/etc/init/*.rc),\
@@ -119,7 +120,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     BlasterThemesStub \
     OmniStyle \
-    StitchImage
+    StitchImage \
+    CustomFonts    
 
 # Custom Overlays
 # Settings
