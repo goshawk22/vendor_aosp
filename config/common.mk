@@ -263,6 +263,11 @@ PRODUCT_PACKAGES += \
     QStileCircleTrim \
     QStileDefault \
     QStileDualToneCircle \
-    QStileSquircleTrim
+    QStileSquircleTrim \
+    QStileAttemptMountain \
+    QStileDottedCircle \
+    QStileNinja \
+    QStilePokesign \
+    QStileWavey
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
