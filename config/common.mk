@@ -269,6 +269,7 @@ PRODUCT_PACKAGES += \
     QStileNinja \
     QStilePokesign \
     QStileWavey \
+    QStileInkDrop \
     QStileSquaremedo
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
