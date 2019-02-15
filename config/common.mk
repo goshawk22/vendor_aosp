@@ -271,6 +271,7 @@ PRODUCT_PACKAGES += \
     QStileWavey \
     QStileCookie \
     QStileInkDrop \
-    QStileSquaremedo
+    QStileSquaremedo \
+    QStileCircleOutline
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
