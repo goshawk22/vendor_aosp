@@ -272,6 +272,11 @@ PRODUCT_PACKAGES += \
     QStileCookie \
     QStileInkDrop \
     QStileSquaremedo \
+    QStileCosmos \
+    QStileDividedCircle \
+    QStileNeonLight \
+    QStileOxygen \
+    QStileTriangles \
     QStileCircleOutline
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
