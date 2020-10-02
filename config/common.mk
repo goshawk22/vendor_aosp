@@ -279,4 +279,9 @@ PRODUCT_PACKAGES += \
     QStileTriangles \
     QStileCircleOutline
 
+    # Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
