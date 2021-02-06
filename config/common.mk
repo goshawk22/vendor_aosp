@@ -147,6 +147,9 @@ PRODUCT_PACKAGES += \
     SystemDarkAubergineOverlay \
     SystemUIDarkAubergineOverlay
 
+# Plugins
+include packages/apps/Plugins/plugins.mk
+
 # Themed bootanimation
 TARGET_MISC_BLOCK_OFFSET ?= 0
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
