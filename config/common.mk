@@ -30,7 +30,16 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# Some permissions
+# One Plus Exclusives
+ifeq ($(BLASTER_BUILD_TYPE), OFFICIAL)
+include vendor/oplauncher/OPLauncher.mk
+endif
+
+ifeq ($(WITH_OPADDONS), true)
+include vendor/addons/oneplus/apps/config.mk
+endif
+
+# Some Permissions
 PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
     vendor/aosp/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
