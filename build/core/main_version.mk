@@ -1,7 +1,7 @@
 # Build fingerprint
 ifeq ($(BUILD_FINGERPRINT),)
 BUILD_NUMBER_CUSTOM := $(shell date -u +%H%M)
-ifneq ($(filter OFFICIAL,$(CUSTOM_BUILD_TYPE)),)
+ifneq ($(filter OFFICIAL,$(BLASTER_BUILD_TYPE)),)
 BUILD_SIGNATURE_KEYS := release-keys
 else
 BUILD_SIGNATURE_KEYS := test-keys
@@ -18,7 +18,8 @@ ADDITIONAL_BUILD_PROPERTIES += \
 endif
 
 # Branding
-CUSTOM_BUILD_TYPE ?= UNOFFICIAL
+BLASTER_BUILD_TYPE ?= UNOFFICIAL
+BLASTER_VERSION ?= 1.0
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
@@ -32,12 +33,13 @@ CUSTOM_PLATFORM_VERSION := 11.0
 
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := PixelExperience_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
+CUSTOM_VERSION := PixelBlaster_$(BLASTER_VERSION)_$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(BLASTER_BUILD_TYPE)
 CUSTOM_VERSION_PROP := eleven
 
 ADDITIONAL_BUILD_PROPERTIES += \
+    org.blaster.version=$(BLASTER_VERSION) \
     org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
     org.pixelexperience.version.display=$(CUSTOM_VERSION) \
     org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
     org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE)
+    org.pixelexperience.build_type=$(BLASTER_BUILD_TYPE)
