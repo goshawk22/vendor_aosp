@@ -111,6 +111,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     NexusLauncherRelease
 
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 # Custom Overlays
 # Settings
 PRODUCT_PACKAGES += \
