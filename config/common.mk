@@ -112,7 +112,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     NexusLauncherRelease
 
 PRODUCT_PACKAGES += \
-    ThemePicker
+    ThemePicker \
+    BlasterThemesStub
 
 # Custom Overlays
 # Settings
