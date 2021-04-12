@@ -113,7 +113,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 PRODUCT_PACKAGES += \
     ThemePicker \
-    BlasterThemesStub
+    BlasterThemesStub \
+    StitchImage
 
 # Custom Overlays
 # Settings
