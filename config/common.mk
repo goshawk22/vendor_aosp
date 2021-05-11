@@ -34,6 +34,10 @@ ifeq ($(BLASTER_BUILD_TYPE), OFFICIAL)
 include vendor/shadylauncher/ShadyLauncher.mk
 endif
 
+# Font service Permissions
+PRODUCT_COPY_FILES += \
+    vendor/aosp/config/permissions/privapp-permissions-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-system_ext.xml \
+
 # Some Permissions
 PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
