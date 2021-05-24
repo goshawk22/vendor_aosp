@@ -30,14 +30,8 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# One Plus Exclusives
-ifeq ($(BLASTER_BUILD_TYPE), OFFICIAL)
-include vendor/oplauncher/OPLauncher.mk
-endif
-
-ifeq ($(WITH_OPADDONS), true)
-include vendor/addons/oneplus/apps/config.mk
-endif
+# Lawnchair
+include packages/apps/Lawnchair/lawnchair.mk
 
 # Some Permissions
 PRODUCT_COPY_FILES += \
