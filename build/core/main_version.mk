@@ -19,7 +19,7 @@ endif
 
 # Branding
 BLASTER_BUILD_TYPE ?= UNOFFICIAL
-BLASTER_VERSION ?= 1.0
+BLASTER_VERSION ?= 1.5
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
