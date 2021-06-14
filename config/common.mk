@@ -30,8 +30,9 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# Lawnchair
-include packages/apps/Lawnchair/lawnchair.mk
+ifeq ($(BLASTER_BUILD_TYPE), OFFICIAL)
+include vendor/shadylauncher/ShadyLauncher.mk
+endif
 
 # Some Permissions
 PRODUCT_COPY_FILES += \
