@@ -30,9 +30,9 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-ifeq ($(BLASTER_BUILD_TYPE), OFFICIAL)
-include vendor/shadylauncher/ShadyLauncher.mk
-endif
+#ifeq ($(BLASTER_BUILD_TYPE), OFFICIAL)
+#include vendor/shadylauncher/ShadyLauncher.mk
+#endif
 
 # Font service Permissions
 PRODUCT_COPY_FILES += \
