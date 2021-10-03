@@ -248,6 +248,12 @@ ifeq ($(WITH_GAPPS), true)
     BLASTER_BUILDTYPE_VARIANT := GAPPS
 endif
 
+# MicroG
+ifeq ($(WITH_MICROG), true)
+    $(call inherit-product, vendor/aosp/config/microg.mk)
+    BLASTER_BUILDTYPE_VARIANT := MICROG
+endif
+
 # OTA
 $(call inherit-product, vendor/aosp/config/ota.mk)
 
