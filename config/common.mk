@@ -103,11 +103,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/aosp/overlay \
-    vendor/aosp/overlay-pixel \
 
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common \
-    vendor/aosp/overlay-pixel/common
+    vendor/aosp/overlay/common
 
 # TouchGestures
 PRODUCT_PACKAGES += \
@@ -241,6 +239,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.setupwizard.rotation_locked=true \
     ro.setupwizard.enterprise_mode=1
+
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    vendor/aosp/overlay-pixel \
+
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/aosp/overlay-pixel/common
 
 # MicroG
 else ifeq ($(BLASTER_BUILD_VARIANT), MICROG)
