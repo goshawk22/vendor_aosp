@@ -237,7 +237,7 @@ $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 BLASTER_BUILDTYPE_VARIANT := VANILLA
 
 # GApps
-ifeq ($(WITH_GAPPS), true)
+ifeq ($(BLASTER_BUILD_VARIANT), GAPPS)
     $(call inherit-product, vendor/gapps/config.mk)
     BLASTER_BUILDTYPE_VARIANT := GAPPS
     # Google Play services configuration
@@ -248,9 +248,12 @@ ifeq ($(WITH_GAPPS), true)
 endif
 
 # MicroG
-ifeq ($(WITH_MICROG), true)
-    $(call inherit-product, vendor/aosp/config/microg.mk)
-    BLASTER_BUILDTYPE_VARIANT := MICROG
+else ifeq ($(BLASTER_BUILD_VARIANT), MICROG)
+$(call inherit-product, vendor/aosp/config/microg.mk)
+
+# Vanilla
+else
+BLASTER_BUILD_VARIANT := VANILLA
 endif
 
 # OTA
