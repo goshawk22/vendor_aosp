@@ -246,6 +246,9 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay-pixel/common
 
+# RRO Overlays
+$(call inherit-product, vendor/aosp/config/rro_overlays.mk)
+
 # MicroG
 else ifeq ($(BLASTER_BUILD_VARIANT), MICROG)
 $(call inherit-product, vendor/aosp/config/microg.mk)
@@ -257,9 +260,6 @@ endif
 
 # OTA
 $(call inherit-product, vendor/aosp/config/ota.mk)
-
-# RRO Overlays
-$(call inherit-product, vendor/aosp/config/rro_overlays.mk)
 
 # Custom Overlays
 # Settings
