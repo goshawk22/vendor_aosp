@@ -125,7 +125,9 @@ PRODUCT_PACKAGES += \
     BlasterThemesStub \
     OmniStyle \
     StitchImage \
-    CustomFonts    
+    CustomFonts \
+    Dialer \
+    Contacts  
 
 # Custom Overlays
 # Settings
