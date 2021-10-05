@@ -10,4 +10,4 @@ PRODUCT_PACKAGES += \
 	additional_repos.xml \
 	com.google.android.maps.jar
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/microg
+PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/microg
