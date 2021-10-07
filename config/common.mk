@@ -208,11 +208,6 @@ $(call inherit-product, vendor/aosp/config/audio.mk)
 # Bootanimation
 $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
-
-# GApps
-ifeq ($(BLASTER_BUILD_VARIANT), GAPPS)
-$(call inherit-product, vendor/gapps/config.mk)
-
 # Google Play services configuration
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.clientidbase=android-google \
@@ -246,20 +241,27 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/aosp/overlay-pixel/common
 
-# RRO Overlays
-$(call inherit-product, vendor/aosp/config/rro_overlays.mk)
+# GApps
+ifeq ($(BLASTER_BUILD_VARIANT), GAPPS)
+$(call inherit-product, vendor/gapps/config.mk)
 
 # MicroG
 else ifeq ($(BLASTER_BUILD_VARIANT), MICROG)
 $(call inherit-product, vendor/aosp/config/microg.mk)
-
+$(call inherit-product, packages/apps/Lawnchair/lawnchair.mk)
+PRODUCT_PACKAGES += LatinIME
 # Vanilla
 else
 BLASTER_BUILD_VARIANT := VANILLA
+$(call inherit-product, packages/apps/Lawnchair/lawnchair.mk)
+PRODUCT_PACKAGES += LatinIME
 endif
 
 # OTA
 $(call inherit-product, vendor/aosp/config/ota.mk)
+
+# RRO Overlays
+$(call inherit-product, vendor/aosp/config/rro_overlays.mk)
 
 # Custom Overlays
 # Settings
