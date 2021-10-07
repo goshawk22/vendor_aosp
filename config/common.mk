@@ -128,7 +128,8 @@ PRODUCT_PACKAGES += \
     CustomFonts \
     Dialer \
     Contacts \
-    AboutPhone  
+    messaging \
+    AboutPhone
 
 # Custom Overlays
 # Settings
